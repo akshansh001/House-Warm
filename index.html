@@ -84,5 +84,26 @@
 </div>
 <script src="js/snap.svg-min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+	<canvas id="myCanvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            // Add drawing functionality here if needed
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(10, 10, 50, 50);
+        }
+
+        // Initial resize
+        resizeCanvas();
+
+        // Listen for window resize events
+        window.addEventListener('resize', resizeCanvas);
+    </script>
 </body>
 </html>
